@@ -45,11 +45,7 @@ fieldNine.addEventListener("click", RespondMouseClickFieldNine, {
   once: true,
 });
 
-if (winCheck() === true) {
-  console.log("Hello");
-} else {
-  playerChange();
-}
+playerChange();
 
 function playerChange() {
   if (playerXOrO % 2 === 0) {
@@ -103,75 +99,75 @@ function RespondMouseClickFieldNine() {
 function winCheck() {
   // Reihe horizontal 1
   if (arr[1] === "O" && arr[2] === "O" && arr[3] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[1] === "X" && arr[2] === "X" && arr[3] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Reihe horizontal 2
   if (arr[4] === "O" && arr[5] === "O" && arr[6] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[4] === "X" && arr[5] === "X" && arr[6] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Reihe horizontal 3
   if (arr[7] === "O" && arr[8] === "O" && arr[9] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[7] === "X" && arr[8] === "X" && arr[9] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Diagonal 1
 
   if (arr[1] === "O" && arr[5] === "O" && arr[9] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[1] === "X" && arr[5] === "X" && arr[9] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Diagonal 2
 
   if (arr[7] === "O" && arr[5] === "O" && arr[3] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[7] === "X" && arr[5] === "X" && arr[3] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Reihe vertikal 1
   if (arr[1] === "O" && arr[4] === "O" && arr[7] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[1] === "X" && arr[4] === "X" && arr[7] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Reihe vertikal 2
   if (arr[2] === "O" && arr[5] === "O" && arr[8] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[2] === "X" && arr[5] === "X" && arr[8] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 
   // Reihe vertikal 3
   if (arr[3] === "O" && arr[6] === "O" && arr[9] === "O") {
-    return true;
+    alert("Congratulations Player 2, you won!!");
   }
 
   if (arr[3] === "X" && arr[6] === "X" && arr[9] === "X") {
-    return true;
+    alert("Congratulations Player 1, you won!!");
   }
 }
