@@ -14,7 +14,6 @@ body {
 }
 
 #display {
-  align-content: center;
   margin: 0 auto;
   width: 30%;
   display: flex;
@@ -27,10 +26,16 @@ body {
   width: 30%;
   height: 200px;
   border: 2px solid black;
-  justify-content: center;
+  position: relative;
+  font-size: 150px;
+  text-align: center;
 }
 
-.hover-div {
+/* .hover-div {
+  position: ;
+} */
+
+/* .hover-div {
   position: relative;
 }
 
@@ -47,7 +52,7 @@ body {
 .hover-div:hover::after {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /* 
 .hover-div {
