@@ -105,79 +105,87 @@ function RespondMouseClickFieldNine() {
   playerChange();
 }
 
+function playerOneWon() {
+  alert("Congratulations Player 1, you won!!");
+}
+
+function playerTwoWon() {
+  alert("Congratulations Player 2, you won!!");
+}
+
 function winCheck() {
   console.log(arr);
   // Reihe horizontal 1
   if (arr[0] === "O" && arr[1] === "O" && arr[2] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[0] === "X" && arr[1] === "X" && arr[2] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Reihe horizontal 2
   if (arr[3] === "O" && arr[4] === "O" && arr[5] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[3] === "X" && arr[4] === "X" && arr[5] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Reihe horizontal 3
   if (arr[6] === "O" && arr[7] === "O" && arr[8] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[6] === "X" && arr[7] === "X" && arr[8] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Diagonal 1
 
   if (arr[0] === "O" && arr[4] === "O" && arr[8] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[0] === "X" && arr[4] === "X" && arr[8] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Diagonal 2
 
   if (arr[2] === "O" && arr[4] === "O" && arr[6] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[2] === "X" && arr[4] === "X" && arr[6] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Reihe vertikal 1
   if (arr[0] === "O" && arr[3] === "O" && arr[6] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[0] === "X" && arr[3] === "X" && arr[6] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Reihe vertikal 2
   if (arr[1] === "O" && arr[4] === "O" && arr[7] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[1] === "X" && arr[4] === "X" && arr[7] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 
   // Reihe vertikal 3
   if (arr[2] === "O" && arr[5] === "O" && arr[8] === "O") {
-    alert("Congratulations Player 2, you won!!");
+    setTimeout(playerTwoWon, 50);
   }
 
   if (arr[2] === "X" && arr[5] === "X" && arr[8] === "X") {
-    alert("Congratulations Player 1, you won!!");
+    setTimeout(playerOneWon, 50);
   }
 }
