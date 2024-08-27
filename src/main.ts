@@ -4,8 +4,6 @@ let playerXOrO = 0;
 
 let player = "";
 
-const resetButton = <HTMLButtonElement>document.querySelector("#reset");
-
 const arr: string[] = [];
 
 const addEL = document.querySelectorAll("section div");
@@ -59,7 +57,6 @@ function winCheck() {
       setTimeout(playerOneWon, 50);
     } else {
       setTimeout(playerTwoWon, 50);
-      // counter = 11;
     }
     newGame();
   }
