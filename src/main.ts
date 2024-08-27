@@ -23,6 +23,7 @@ for (let i = 0; i < addEL.length; i++) {
 
 function playerChange(DivId: string) {
   if (won === false) {
+    checkIfTie();
     winCheck();
     if (playerXOrO % 2 === 0) {
       player = "X";
@@ -154,5 +155,23 @@ function winCheck() {
       setTimeout(playerTwoWon, 50);
       won = true;
     }
+  }
+}
+
+function checkIfTie() {
+  if (
+    arr[0] === player &&
+    arr[1] === player &&
+    arr[2] === player &&
+    arr[3] === player &&
+    arr[4] === player &&
+    arr[5] === player &&
+    arr[6] === player &&
+    arr[7] === player &&
+    arr[8] === player &&
+    won === false
+  ) {
+    alert("Its a Tie!!");
+    showButton();
   }
 }
