@@ -4,6 +4,8 @@ let playerXOrO = 0;
 
 let player = "";
 
+let won: boolean = false;
+
 const arr: string[] = [];
 
 const resetButton = <HTMLButtonElement>document.querySelector("#reset");
@@ -20,20 +22,23 @@ for (let i = 0; i < addEL.length; i++) {
 }
 
 function playerChange(DivId: string) {
-  if (playerXOrO % 2 === 0) {
-    player = "X";
-    (<HTMLDivElement>document.getElementById(DivId)).innerHTML = player;
-    playerXOrO += 1;
-    let indexArray = parseInt(DivId);
-    arr[indexArray] = player;
+  if (won === false) {
     winCheck();
-  } else {
-    player = "O";
-    (<HTMLDivElement>document.getElementById(DivId)).innerHTML = player;
-    playerXOrO += 1;
-    let indexArray = parseInt(DivId);
-    arr[indexArray] = player;
-    winCheck();
+    if (playerXOrO % 2 === 0) {
+      player = "X";
+      (<HTMLDivElement>document.getElementById(DivId)).innerHTML = player;
+      playerXOrO += 1;
+      let indexArray = parseInt(DivId);
+      arr[indexArray] = player;
+      winCheck();
+    } else {
+      player = "O";
+      (<HTMLDivElement>document.getElementById(DivId)).innerHTML = player;
+      playerXOrO += 1;
+      let indexArray = parseInt(DivId);
+      arr[indexArray] = player;
+      winCheck();
+    }
   }
 }
 
@@ -55,9 +60,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
 
@@ -66,9 +73,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
 
@@ -77,9 +86,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
   // Diagonal 1
@@ -87,9 +98,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
   // Diagonal 2
@@ -97,9 +110,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
 
@@ -108,9 +123,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
   // Reihe vertikal 2
@@ -118,9 +135,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
 
@@ -129,9 +148,11 @@ function winCheck() {
     if (player === "X") {
       showButton();
       setTimeout(playerOneWon, 50);
+      won = true;
     } else {
       showButton();
       setTimeout(playerTwoWon, 50);
+      won = true;
     }
   }
 }
