@@ -11,11 +11,13 @@ h2 {
 
 body {
   background-color: #151b29;
+  height: 100vh;
 }
 
 #display {
   margin: 0 auto;
   width: 30%;
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,12 +25,37 @@ body {
 }
 
 #display div {
-  width: 30%;
+  width: calc(100% / 3);
+  box-sizing: border-box;
   height: 200px;
   border: 2px solid black;
-  position: relative;
   font-size: 150px;
   text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 100px;
+  font-size: xx-large;
+  background-color: #8ecae6;
+  color: #023047;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+button:hover {
+  border-color: rgb(11, 245, 225);
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em hwb(180 48% 9%);
+  cursor: pointer;
+}
+
+.show {
+  visibility: visible;
 }
 
 /* .hover-div {
