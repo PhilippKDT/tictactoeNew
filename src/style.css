@@ -28,9 +28,10 @@ body {
   width: calc(100% / 3);
   box-sizing: border-box;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid hsl(0, 0%, 100%);
   font-size: 150px;
   text-align: center;
+  color: #8ae5f5;
 }
 
 button {
@@ -38,7 +39,7 @@ button {
   height: 100px;
   font-size: xx-large;
   background-color: hwb(224 2% 61%);
-  color: hsl(180, 67%, 60%);
+  color: hsl(216, 60%, 46%);
   font-weight: bold;
   position: absolute;
   top: 50%;
