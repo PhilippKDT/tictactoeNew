@@ -37,8 +37,8 @@ button {
   width: 200px;
   height: 100px;
   font-size: xx-large;
-  background-color: #8ecae6;
-  color: #023047;
+  background-color: hwb(224 2% 61%);
+  color: hsl(180, 67%, 60%);
   font-weight: bold;
   position: absolute;
   top: 50%;

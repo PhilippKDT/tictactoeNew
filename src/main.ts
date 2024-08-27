@@ -6,6 +6,9 @@ let player = "";
 
 const resetButton = <HTMLButtonElement>document.querySelector("#reset");
 
+const addEL = <HTMLDivElement>document.querySelector(".backgr-div");
+addEL.addEventListener("click", RespondMouseClickFieldOne, { once: true });
+
 const arr: string[] = [];
 
 const fieldOne = <HTMLDivElement>document.getElementById("click1");
@@ -108,12 +111,15 @@ function RespondMouseClickFieldNine() {
 }
 
 function playerOneWon() {
-  alert("Congratulations Player 1, you won!!");
   resetButton.classList.add("show");
+  alert("Congratulations Player 1, you won!!");
+  removeEventListener();
 }
 
 function playerTwoWon() {
+  resetButton.classList.add("show");
   alert("Congratulations Player 2, you won!!");
+  removeEventListener();
 }
 
 function winCheck() {
@@ -191,4 +197,16 @@ function winCheck() {
   if (arr[2] === "X" && arr[5] === "X" && arr[8] === "X") {
     setTimeout(playerOneWon, 50);
   }
+}
+
+function removeEventListener() {
+  fieldOne.removeEventListener("click", RespondMouseClickFieldOne, false);
+  fieldTwo.removeEventListener("click", RespondMouseClickFieldTwo, false);
+  fieldThree.removeEventListener("click", RespondMouseClickFieldThree, false);
+  fieldFour.removeEventListener("click", RespondMouseClickFieldFour, false);
+  fieldFive.removeEventListener("click", RespondMouseClickFieldFive, false);
+  fieldSix.removeEventListener("click", RespondMouseClickFieldSix, false);
+  fieldSeven.removeEventListener("click", RespondMouseClickFieldSeven, false);
+  fieldEight.removeEventListener("click", RespondMouseClickFieldEight, false);
+  fieldNine.removeEventListener("click", RespondMouseClickFieldNine, false);
 }
