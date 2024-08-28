@@ -23,7 +23,6 @@ for (let i = 0; i < addEL.length; i++) {
 
 function playerChange(DivId: string) {
   if (won === false) {
-    checkIfTie();
     winCheck();
     if (playerXOrO % 2 === 0) {
       player = "X";
@@ -41,6 +40,7 @@ function playerChange(DivId: string) {
       winCheck();
     }
   }
+  checkIfTie();
 }
 
 function playerOneWon() {
@@ -49,6 +49,10 @@ function playerOneWon() {
 
 function playerTwoWon() {
   alert("Congratulations Player 2, you won!!");
+}
+
+function tie() {
+  alert("Its a Tie!!");
 }
 
 function showButton() {
@@ -160,18 +164,18 @@ function winCheck() {
 
 function checkIfTie() {
   if (
-    arr[0] === player &&
-    arr[1] === player &&
-    arr[2] === player &&
-    arr[3] === player &&
-    arr[4] === player &&
-    arr[5] === player &&
-    arr[6] === player &&
-    arr[7] === player &&
-    arr[8] === player &&
+    (arr[0] === "X" || arr[0] === "O") &&
+    (arr[1] === "X" || arr[1] === "O") &&
+    (arr[2] === "X" || arr[2] === "O") &&
+    (arr[3] === "X" || arr[3] === "O") &&
+    (arr[4] === "X" || arr[4] === "O") &&
+    (arr[5] === "X" || arr[5] === "O") &&
+    (arr[6] === "X" || arr[6] === "O") &&
+    (arr[7] === "X" || arr[7] === "O") &&
+    (arr[8] === "X" || arr[8] === "O") &&
     won === false
   ) {
-    alert("Its a Tie!!");
+    setTimeout(tie, 50);
     showButton();
   }
 }
