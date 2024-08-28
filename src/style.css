@@ -1,3 +1,4 @@
+/* zwei Fonts */
 .matemasie-regular {
   font-family: "Matemasie", sans-serif;
   font-weight: 400;
@@ -9,25 +10,26 @@
   font-weight: 400;
   font-style: normal;
 }
-
+/* Design h1 "TicTacToe */
 h1 {
   font-size: 3em;
   color: white;
   text-align: center;
   font-family: Matemasie;
 }
-
+/* Desing h2 "Player1:X" "Player2:O" */
 h2 {
   color: white;
   text-align: center;
   font-family: Permanent Marker;
 }
 
+/* hintergund der website */
 body {
   background: linear-gradient(45deg, #0077b6, #151b29);
   height: 100vh;
 }
-
+/* spielfeld */
 #display {
   margin: 0 auto;
   width: 30%;
@@ -37,7 +39,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/* divs im spielfeld */
 #display div {
   width: calc(100% / 3);
   box-sizing: border-box;
@@ -47,7 +49,7 @@ body {
   text-align: center;
   color: hsl(0, 0%, 100%);
 }
-
+/* versteckter Reset Button */
 button {
   width: 200px;
   height: 100px;
@@ -62,14 +64,14 @@ button {
   visibility: hidden;
   font-family: Permanent Marker;
 }
-
+/* verhalten des button bei :hover */
 button:hover {
   border-color: rgb(150, 223, 192);
   color: white;
   box-shadow: 0 0.5em 0.5em -0.4em hwb(180 48% 9%);
   cursor: pointer;
 }
-
+/*Class die Elemtene sichtbar macht */
 .show {
   visibility: visible;
 }
